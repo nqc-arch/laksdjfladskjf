@@ -16,6 +16,9 @@ public class Persona {
     private String genero;
 
     /*CONSTRUCTOR*/
+    public Persona(){
+        
+    }
     public Persona(String nombre, String apellidos, String genero) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -46,6 +49,12 @@ public class Persona {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    //toString()
+    @Override
+    public String toString() {
+        return "\nPersona{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", genero=" + genero + '}';
     }
 
 }

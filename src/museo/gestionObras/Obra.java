@@ -4,6 +4,8 @@
  */
 package museo.gestionObras;
 
+import java.util.Objects;
+
 /**
  *
  * @author dam117
@@ -56,6 +58,39 @@ public class Obra {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    /*EQUALS AND HASHCODE*/
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 71 * hash + Objects.hashCode(this.titulo);
+        hash = 71 * hash + Objects.hashCode(this.autor);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Obra other = (Obra) obj;
+        if (!Objects.equals(this.titulo.toLowerCase(), other.titulo.toLowerCase())) {
+            return false;
+        }
+        return Objects.equals(this.autor.toLowerCase(), other.autor.toLowerCase());
+    }
+
+    //toString
+    @Override
+    public String toString() {
+        return "Obra{" + "titulo=" + titulo + ", autor=" + autor + ", genero=" + genero + ", precio=" + precio + '}';
     }
 
 }

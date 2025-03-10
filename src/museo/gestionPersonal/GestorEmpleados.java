@@ -21,6 +21,17 @@ public class GestorEmpleados {
         this.listaEmpleados = new HashSet<Empleado>();
     }
 
+    /*GET*/
+    public Set<Empleado> getListaEmpleados() {
+        return listaEmpleados;
+    }
+
+    /*SET*/
+    public void setListaEmpleados(Set<Empleado> listaEmpleados) {
+        this.listaEmpleados = listaEmpleados;
+    }
+
+
     /*METODOS*/
     //insertarEmpleado()
     public void insertarEmpleado(Empleado e) {
@@ -45,8 +56,10 @@ public class GestorEmpleados {
                     contador++;
                 }
             }
-            if (contador == listaEmpleados.size()) System.out.println("No hay"
-                    + " empleados con ese numero de seguridad social.");
+            if (contador == listaEmpleados.size()) {
+                System.out.println("No hay"
+                        + " empleados con ese numero de seguridad social.");
+            }
         }
     }
 

@@ -15,7 +15,7 @@ public class Directivo extends Empleado {
     /*ATRIBUTOS*/
     private String departamento;
 
-    /*CONSTRUCTOR*/
+    /*CONSTRUCTOR*/  
     public Directivo(String departamento, Calendar fechaAlta, int numSeguridadSocial, double sueldo, String nombre, String apellidos, String genero) {
         super(fechaAlta, numSeguridadSocial, sueldo, nombre, apellidos, genero);
         this.departamento = departamento;
